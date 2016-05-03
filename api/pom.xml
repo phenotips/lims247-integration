@@ -30,6 +30,11 @@
   <dependencies>
     <dependency>
       <groupId>org.xwiki.platform</groupId>
+      <artifactId>xwiki-platform-ldap-authenticator</artifactId>
+      <version>${xwiki.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-model</artifactId>
       <version>${xwiki.version}</version>
     </dependency>
@@ -86,9 +91,8 @@
       <artifactId>httpclient</artifactId>
     </dependency>
     <dependency>
-      <groupId>net.sf.json-lib</groupId>
-      <artifactId>json-lib</artifactId>
-      <classifier>jdk15</classifier>
+      <groupId>org.json</groupId>
+      <artifactId>json</artifactId>
     </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
@@ -96,7 +100,7 @@
     </dependency>
     <dependency>
       <groupId>javax.servlet</groupId>
-      <artifactId>servlet-api</artifactId>
+      <artifactId>javax.servlet-api</artifactId>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
@@ -111,7 +115,7 @@
     <!-- Test dependencies -->
     <dependency>
       <groupId>org.xwiki.commons</groupId>
-      <artifactId>xwiki-commons-test-component</artifactId>
+      <artifactId>xwiki-commons-tool-test-component</artifactId>
       <version>${xwiki.version}</version>
       <scope>test</scope>
     </dependency>
