@@ -89,6 +89,9 @@ public class Lims247AuthServiceImpl extends XWikiLDAPAuthServiceImpl implements 
                 user = checkRemoteToken(token, username, pn, context);
             }
             if (user != null) {
+                // Create a local user, otherwise this user will lack rights to perform actions in the application
+                createUser(username, context);
+
                 storeUserInSession(new LimsAuthentication(token, user, pn), context);
                 setupContextForLims(context);
                 storeAccesMode(context);
